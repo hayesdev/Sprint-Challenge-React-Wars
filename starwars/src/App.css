@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Charm|Righteous&display=swap");
+
 .App {
   text-align: center;
 }
@@ -6,3 +8,8 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.star-card {
+  display: flex;
+  justify-content: center;
+}
