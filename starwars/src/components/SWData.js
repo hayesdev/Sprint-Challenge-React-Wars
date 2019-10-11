@@ -4,6 +4,7 @@ import SWCard from "./SWCard";
 
 export default function SWData() {
   const [characters, setCharacters] = useState([]);
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -18,6 +19,24 @@ export default function SWData() {
         setCharacters(response.data.results);
       })
 
+      //****************** */ Attempting multiple API calls to grab nested data *************
+
+      //   const [planets, setPlanets] = useState([]);
+      //   const [films, setFilms] = useState([]);
+      //   .then(
+      //     axios.get("https://swapi.co/api/planets/").then(response => {
+      //       console.log(response.data.results);
+      //       setPlanets(response.data.results);
+      //     })
+      //   )
+
+      //   .then(
+      //     axios.get("https://swapi.co/api/films/").then(response => {
+      //       console.log(response.data.results);
+      //       setFilms(response.data.results);
+      //     })
+      //   )
+
       .catch(error => {
         console.log("There was an error returning data", error);
       });
@@ -30,9 +49,9 @@ export default function SWData() {
           <SWCard
             key={char.id}
             name={char.name}
-            homeworld={char.homeworld}
-            vehicles={char.vehicles}
-            films={char.films}
+            gender={char.gender}
+            height={char.height}
+            weight={char.mass}
           />
         );
       })}
